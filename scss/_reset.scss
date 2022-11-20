@@ -1,0 +1,6 @@
+//Устанавливаем для ВСЕХ элементов
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

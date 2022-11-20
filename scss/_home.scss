@@ -1,0 +1,7 @@
+.home {
+    background: #000;
+    //Медиа запрос укажем прямо в клессе
+    @media (max-width: 800px) {
+        background: green;
+    }
+}

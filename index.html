@@ -1,0 +1,38 @@
+<!-- Стандартные теги прописываем через ! + таб -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан Golden Egg</title>
+    <!-- Формруем шрифты на google fonts и подключаем -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Подключаем линк с помощью link + таб -->
+    <!-- Корневой файл стилей style.min.css -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <!-- Проверяем наш svg спрайт и вставляем иконку -->
+    <a href="#">
+        <svg width="60" height="60">
+            <use xlink:href="img/sprite-icons.svg#facebook"></use>
+        </svg>
+    </a>
+    <a href="#">
+        <svg width="60" height="60">
+            <use xlink:href="img/sprite-icons.svg#twitter"></use>
+        </svg>
+    </a>
+
+    <!-- В конце подключаем js из Swiper-слайдера. Без использования jQuery -->
+    <script src="js/swiper.min.js"></script>
+</body>
+
+</html>

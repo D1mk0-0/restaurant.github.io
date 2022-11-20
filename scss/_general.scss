@@ -1,0 +1,16 @@
+// Добавляем шрифты и объявляем переменные
+$kurale-font: 'Kurale', serif;
+$os-font: 'Open Sans', sans-serif;
+
+//Так же установим част импользуемые моменты 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+//Так же установим основной шрифт для body
+body {
+    background-color: black;
+    font-family: $os-font;
+}
