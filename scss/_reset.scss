@@ -3,4 +3,16 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Уберем маркеры для всех элементов списков
+ul {
+    list-style: none;
+}
+
+//Для всех ссылок убраем подчеркивания 
+a {
+    text-decoration: none;
 }

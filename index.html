@@ -18,19 +18,71 @@
 </head>
 
 <body>
-
-    <!-- Проверяем наш svg спрайт и вставляем иконку -->
-    <a href="#">
-        <svg width="60" height="60">
-            <use xlink:href="img/sprite-icons.svg#facebook"></use>
-        </svg>
-    </a>
-    <a href="#">
-        <svg width="60" height="60">
-            <use xlink:href="img/sprite-icons.svg#twitter"></use>
-        </svg>
-    </a>
-
+    <!-- Класс wrapper что бы все растягивалось вместе с экраном -->
+    <div class="wrapper">
+        <section class="home">
+            <!-- Установим фон картинкой, но пропишем тут, что бы ее можно было заменить -->
+            <img class="home__img" src="img/dish.jpg" alt="">
+            <!-- Так же подготовим возможное видео на фоне -->
+            <!-- <video class="home__video" src="dish.mp4" autoplay loop muted></video> -->
+            <!-- Устанавливаем контейнер для нашего контента -->
+            <div class="home__container">
+                <div class="container">
+                    <!-- Создаем блок с меню, уточним с каким меню -->
+                    <nav class="top-menu">
+                        <ul class="top-menu__list">
+                            <li class="top-menu__item"><a href="#about">О ресторане</a></li>
+                            <li class="top-menu__item"><a href="#team">Команда</a></li>
+                            <li class="top-menu__item"><a href="#order">Заказать</a></li>
+                            <li class="logo"><img src="img/logo.png" alt=""></li>
+                            <li class="top-menu__item"><a href="#menu">Меню</a></li>
+                            <li class="top-menu__item"><a href="#events">Мероприятия</a></li>
+                            <li class="top-menu__item"><a href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--end container-->
+                <div class="container home__container-center">
+                    <div class="time-work">Пн - Пт: 8 - 22, Сб - Вс: 9 - 24</div>
+                    <div class="home__text">
+                        <h6>Ресторан</h6>
+                        <h1>Golden Egg</h1>
+                        <div class="home__btns">
+                            <a href="#order">Заказать столик</a>
+                            <a href="#about">О ресторане</a>
+                        </div>
+                        <a href="#about" class="arrow__about">
+                            <!-- Используем наш SVG спрайт -->
+                            <svg>
+                                <use xlink:href="img/sprite-icons.svg#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="socials">
+                        <a href="#" target="_blank">
+                            <!-- Сново используем спрайт -->
+                            <svg>
+                                <use xlink:href="img/sprite-icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <!-- Сново используем спрайт -->
+                            <svg>
+                                <use xlink:href="img/sprite-icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <!-- Сново используем спрайт -->
+                            <svg>
+                                <use xlink:href="img/sprite-icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div> <!-- end container home__container-center -->
+            </div>
+            <!--end home__container-->
+        </section>
+    </div> <!-- end wrapper -->
     <!-- В конце подключаем js из Swiper-слайдера. Без использования jQuery -->
     <script src="js/swiper.min.js"></script>
 </body>

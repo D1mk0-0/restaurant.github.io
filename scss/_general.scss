@@ -2,15 +2,13 @@
 $kurale-font: 'Kurale', serif;
 $os-font: 'Open Sans', sans-serif;
 
-//Так же установим част импользуемые моменты 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+//Объявляем переменные цвета
+$white: #fff;
+$yellow: #E8C300;
 
-//Так же установим основной шрифт для body
-body {
-    background-color: black;
-    font-family: $os-font;
-}
+//Переменные размеры
+$wrap: 1470px;
+$container: 1200px;
+
+//Помошники
+$mc: 0 auto;
