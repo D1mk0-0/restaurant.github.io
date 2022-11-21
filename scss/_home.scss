@@ -1,7 +1,177 @@
+//Стилизуем нашу первую, домашнюю страницу
 .home {
-    background: #000;
-    //Медиа запрос укажем прямо в клессе
-    @media (max-width: 800px) {
-        background: green;
+    min-height: 800px;
+    //Если картинка на фоне absolute, то сам блок должен быть relative
+    position: relative;
+    //В рамках разработки добавим границу
+    outline: 1px solid red;
+
+    //& - ссылка на родителя
+    &__img,
+    &__video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        //Что бы картинка растягивалась максимально
+        object-fit: cover;
     }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        //Что бы не маска не перекрывала контент
+        z-index: 2;
+    }
+
+    //Линейный градент поверх фоновой картинки мы сделаем с помощью маски/псевдоэлемента
+    &::after {
+        //Обязательное св-во content
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        //Затем забираем градиент из фигмы
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+}
+
+.top-menu__list {
+    //Воспользуемся нашим миксином
+    @include flex(center, center);
+}
+
+.top-menu__item {
+    margin: 0 5px;
+
+    a {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 12px;
+        font-weight: 700;
+        //Что бы задать отступы сверху и по бокам укажем display block (padding не работает на неблочных элементах)
+        display: block;
+        padding: 40px 25px;
+        //Добавм transition для плавного изменения цвета при наведении
+        transition: 0.3s;
+        //Что бы элемент не дергался при появлении рамки - сделаем ее заранее, но прозрачной
+        border-top: 5px solid transparent;
+
+        //Добавляем динамичный элемен при наведении
+        &:hover {
+            color: $yellow;
+            border-top: 5px solid $yellow;
+        }
+    }
+}
+
+.logo {
+    margin: 0 60px;
+
+    //Немного приопустим картинку
+    img {
+        position: relative;
+        top: 15px;
+    }
+}
+
+.home__container-center {
+    //Сново задействуем наш миксин
+    @include flex(space-between, flex-start);
+    margin-top: 175px;
+}
+
+.socials {
+    //Ограничим блок по ширине иконок
+    width: 62px;
+
+    a {
+        display: block;
+        height: 62px;
+        border-radius: 50%;
+        transition: 0.3s;
+        margin-bottom: 20px;
+
+        &:hover {
+            background: $yellow;
+        }
+    }
+}
+
+.home__text {
+    text-align: center;
+
+    h6 {
+        text-transform: uppercase;
+        color: $white;
+        font-size: $text-size;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        color: $yellow;
+        font-family: $kurale-font;
+        font-weight: 400;
+        font-size: 72px;
+        margin-top: 25px;
+
+        //Псевдокласс для полоски 
+        &::after {
+            //Используем миксин
+            @include line;
+        }
+    }
+}
+
+.home__btns {
+    margin-bottom: 80px;
+
+    a {
+        text-transform: uppercase;
+        //Сделаем наши ссылки и блочными и что бы находились на одной линии 
+        display: inline-block;
+        width: 200px;
+        height: 60px;
+        //Что бы наш текст находился по центру кнопки
+        line-height: 60px;
+        color: $white;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 12px;
+        transition: 0.3s;
+        border: 1px solid $white-opacity;
+        margin: 0 20px 20px;
+
+        &:hover {
+            background: $yellow;
+        }
+    }
+
+    //Изначальное поведение для левой кнопки
+    .btn-order {
+        background: $yellow;
+        border: none;
+        //Используем св-во SASS для изменения цвета
+        &:hover {
+            background: darken($yellow, 10%);
+        }
+    }
+}
+.arrow__about {
+    display: block;
+    width: 62px;
+    height: 62px;
+    margin: $mc;
+}
+
+.time-work {
+    font-weight: 700;
+    font-style: 12px;
+    color: $white;
+    //Поворачваем на 90 градусов
+    transform: rotate(-90deg);
+    margin-top: 120px;
+    margin-left: -115px;
 }
