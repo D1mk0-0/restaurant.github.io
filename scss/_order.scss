@@ -1,0 +1,128 @@
+.order {
+    padding-top: 100px;
+    padding-bottom: 45px;
+}
+
+.order__container {
+    //Опять пользумся МИКСИНОМ
+    @include flex (space-between, center);
+}
+
+.order__text {
+    width: 50%;
+    max-width: 565px;
+    text-align: center;
+}
+
+.order-form {
+    //Опять воспользуемся нашим МИКСИНОМ
+    @include flex (space-between, center);
+    input {
+        //Что бы задать ширину каждого поля ввода, с учетом отступа -укажем выражение
+        width: calc(50% - 5px);
+        //Так же отступ снизу
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background: $gray;
+        //Сделаем рамку заранее что бы не дергалась при focus - эффекте
+        border: 1px solid transparent;
+        //Убираем стандартный оутлайн
+        outline: none;
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+        &::placeholder {
+            color: $gray-opacity;
+        }
+        //Сделаем динамику. Сработает только при попадении курсора в поле
+        &:focus {
+            border: 1px solid $gray-opacity;
+        }
+    }
+    .order__select {
+        //Задаем такие же размеры для падающего меню
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+        position: relative;
+        //Возьмем нашу стрелочку - указатель из фигмы. Добавляем ее с помощью псевдоэлемента
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            //Backgroung сложно задать с помощью спрайта по этому так
+            background: url(../img/select-arrow.svg) center no-repeat;
+            //Что бы сдвинуть стрелочку
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 10px);
+            //Что бы не было выделения pleiceholder'а
+            pointer-events: none;
+        }
+        //Стилизуем сам select
+        select {
+            width: 100%;
+            background: $gray;
+            border: 1px solid transparent;
+            height: 60px;
+            padding: 0 20px;
+            font-size: 14px;
+            outline: none;
+            border-radius: 5px;
+            //Что бы убрать стандартную струлку 
+            appearance: none;
+            //Используем лайфхак что бы стилизовать наш селект. Т.Е. текст
+            &:not(:valid) {
+                color: $gray-opacity;
+            }
+        }
+        //Поправим наши элементы в выпадающем списке
+        option {
+            color: $color;
+        }
+    }
+    button {
+        text-transform: uppercase;
+        width: 100%;
+        background: $yellow;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 12px;
+        border-radius: 5px;
+        color: $white;
+        height: 60px;
+        transition: 0.3s;
+        &:hover {
+            background: darken($yellow, 10%);
+        }
+    }
+}
+
+.order__img {
+    //Просто скопипастим все с предыдущей формы
+    width: 50%;
+    max-width: 500px;
+    //Что бы положить кружок в этот блок сделаем его relative
+    position: relative;
+    //Пропишем позицию кружочка именно внутри блока
+    .circle {
+        right: 0;
+        transform: translate(40%, -50%);
+    }
+    img {
+        //Тут тоже сделаем миксин
+        @include img;
+    }
+}
+
+.order__contacts {
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray-opacity;
+    text-align: center;
+    margin-top: 45px;
+    a {
+        color: $gray-opacity;
+        font-weight: 700;
+    }
+}

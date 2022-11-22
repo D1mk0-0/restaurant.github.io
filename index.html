@@ -134,10 +134,62 @@
                 </div>
             </div>
             <!-- end team__container -->
-        </section>
+        </section> <!--  Закрывает team -->
+        <section class="order" id="order">
+            <div class="container order__container">
+                <div class="order__text">
+                    <h2>Заказать столик</h2>
+                    <form action="" class="order-form">
+                        <!-- required оябзательный для заполнения -->
+                        <input type="text" placeholder="Имя" required>
+                        <input type="text" placeholder="Email" required>
+                        <input type="text" placeholder="Телефон" required>
+                        <div class="order__select">
+                            <select required>
+                                <option value="">Кол-во людей</option>
+                                <option value="1">1</option>
+                                <option value="2-5">2-5</option>
+                                <option value="6-10">6-10</option>
+                                <option value="11-40">11-40</option>
+                                <option value="41-100">41-100</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Дата (дата/месяц)" required>
+                        <div class="order__select">
+                            <select required>
+                                <option value="">Время</option>
+                                <option value="10:00 - 14:00">10:00 - 14:00</option>
+                                <option value="14:00 - 18:00">14:00 - 18:00</option>
+                                <option value="18:00 - 23:00">18:00 - 23:00</option>
+                            </select>
+                        </div>
+                        <button type="submit">Оформить заказ</button>
+                    </form>
+                </div>
+                <div class="order__img">
+                    <img src="img/order-img.jpg" alt="">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="order__contacts">
+                    Пн - Пт: <strong>8 - 22</strong>, Сб - Вс: <strong>9 - 23</strong>, Телефон: <a
+                        href="tel:+7 800 555 35 35">+7 800 555 35 35</a>/<a href="tel:+7 800 555 35 35">+7 800 555 35
+                        35</a>
+                </div>
+            </div>
+        </section> <!--  Закрывает order -->
+        <section class="spec">
+            <div class="container spec__container">
+                <h6>Спец-предложения</h6>
+            </div>
+            <!-- Подключаем наш swiper-слайдер четко по документации -->
+        </section> <!--  Закрывает spec -->
     </div> <!-- end wrapper -->
     <!-- В конце подключаем js из Swiper-слайдера. Без использования jQuery -->
     <script src="js/swiper.min.js"></script>
+    <!-- И наш собственный js  -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
