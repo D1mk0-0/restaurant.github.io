@@ -1,0 +1,47 @@
+.team {
+    //Используем картинку + градиент
+    background: url(../img/team-bg.jpg) center/cover no-repeat, 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+    //Нужно для смешения картинки с градиентом
+    background-blend-mode: multiply;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    // Либо padding: 40px, 0, 100px;
+    h6 {
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+        font-weight: 700;
+        font-size: 12px;
+        //Межбуквенный отступ*
+        letter-spacing: 0.5em;
+    }
+}
+
+.team__container {
+    //Сново используем наш МИКСИН
+    @include flex (space-between, center);
+    margin-top: 50px;
+}
+
+.team__text {
+    width: 50%;
+    min-width: 600px;
+    text-align: center;
+    color: $white;
+}
+
+.team__img {
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    .circle {
+        left: 0;
+        //(Горизонтали, вертикали)
+        transform: translate(-40%, -50%);
+    }
+    img {
+        //Тут тоже сделаем миксин
+        @include img;
+    }
+}

@@ -1,3 +1,31 @@
-.adout {
-    display: flex;
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about__container {
+    //Сново используем наш миксин
+    @include flex (space-between, center);
+}
+
+.about__text {
+    width: 50%;
+    min-width: 600px;
+    text-align: center;
+}
+
+.about__img {
+    width: 50%;
+    max-width: 500px;
+    //Что бы положить кружок в этот блок сделаем его relative
+    position: relative;
+    //Пропишем позицию кружочка именно внутри блока
+    .circle {
+        right: 0;
+        transform: translate(40%, -50%);
+    }
+    img {
+        //Тут тоже сделаем миксин
+        @include img;
+    }
 }

@@ -7,10 +7,11 @@ $white: #fff;
 $white-opacity: rgba(255,255,255, 0.5);
 $yellow: #E8C300;
 $color: #000;
+$black-opacity: rgba(0, 0, 0, 0.5);
 
 //Переменные размеры
-$wrap: 1470px;
-$container: 1200px;
+$wrap: 1440px;
+$container: 1230px;
 $text-size: 18px;
 
 //Помошники
@@ -38,6 +39,15 @@ $mc: 0 auto;
     margin-bottom: 25px;
 }
 
+//Сделаем миксин для изображений
+@mixin img {
+    width: 100%;
+    height: auto;
+    //Копируем тени и border-radius из фигмы
+    filter: drop-shadow(0px 0px 50px $black-opacity);
+    border-radius: 5px;
+}
+
 body {
     background: $white;
     font-family: $os-font;
@@ -48,19 +58,47 @@ body {
 .wrapper {
     max-width: $wrap;
     margin: $mc;
-    padding: 0 15px;
 }
 
 .container {
     max-width: $container;
     margin: $mc;
-    //В рамках разработки добавим границу
-    outline: 1px solid red;
+    padding: 0 15px;
 }
 
 //Чтобы наши SVG не были больше родителя
 svg {
     width: 100%;
     height: 100%;
+}
+
+//Пропишем наши кружочки
+.circle {
+    width: 250px;
+    height: 250px;
+    border: 20px solid $yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    filter: drop-shadow(0px 0px 100px $black-opacity);
+}
+
+section h2 {
+    text-transform: uppercase;
+    font-family: $kurale-font;
+    font-weight: 400;
+    font-size: 42px;
+    //Используем наш миксин с полоской 
+    &::after {
+        @include line;
+    }
+}
+section p {
+    //Межстрочный отступ указываем в % что бы адаптировался под размер шрифта при медиазапросе
+    line-height: 175%;
+    margin-bottom: 25px;
+}
+.intro {
+    font-weight: 700;
 }
 
