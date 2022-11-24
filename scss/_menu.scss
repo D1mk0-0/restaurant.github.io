@@ -1,0 +1,171 @@
+.menu {
+    padding-top: 70px;
+    padding-bottom: 75px;
+    h2 {
+        text-align: center;
+    }
+    &__intro {
+        max-width: 565px;
+        margin: $mc;
+        text-align: center;
+    }
+}
+
+.tabs__container {
+    margin: 45px auto 55px;
+    position: relative;
+    height: 60px;
+    //Немного ограничим ширину 
+    max-width: $container;
+    //Добавляем наш скролл
+    //По вертикали нет скрола
+    overflow-y: hidden;
+    //Скролл по горизонтали (Если элементы помещаются, то все отлично, если нет - то добавляется скролл)
+    overflow-x: auto;
+    //Теперь стилизуем скроллбар
+    &::-webkit-scrollbar {
+        height: 8px;
+        background: $tabs-opacity;
+        border-radius: 4px;
+    }
+    //Теперь сам ползунок скроллбара
+    &::-webkit-scrollbar-thumb {
+        background: $yellow;
+        border-radius: 4px;
+    }
+}
+
+.tabs {
+    //Нужно для скрола
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex (center, center);
+    flex-wrap: nowrap;
+    &__item {
+        min-width: 163px;
+        cursor: pointer;
+        padding: 0 10px;
+        transition: 0.3s;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        color: $tabs;
+        height: 47px;
+        @include flex (center, center);
+        border-right: 1px solid $tabs-opacity;
+        &:hover,
+        &.active {
+            background: $yellow;
+        }
+        //Убираем рамку у последнего элемента
+        &:last-child {
+            border: none;
+        }
+    }
+    //Что бы наш скролбар начинался с начала мы будем добавлять ему класс с помощью js
+    //То есть если он переполнен
+    &.overflow {
+        left: 0;
+        transform: none;
+    }
+}
+
+.menu__sliders {
+    position: relative;
+    max-width: $container;
+    margin: $mc;
+    overflow: hidden;
+    //Что бы они бесконтрольно не росли - укажем высоту
+    height: 460px;
+}
+
+.menu__slider {
+    height: 100%;
+}
+
+//Делаем все слайды скрытыми. Потом будем открывать их с помошью класса
+.menu__slider-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    &.show {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+//Теперь стилизуем наши элементы самого меню
+.menu__item {
+    //Ограничим по длине
+    max-width: 500px;
+    @include flex (space-between, center);
+    &-img {
+        width: 260px;
+        height: 170px;
+        //Что бы картинки были по размеру окошка
+        object-fit: cover;
+        border: 4px solid $yellow;
+    }
+    //Что бы сработал flex нам нужны размеры
+    &-text {
+        max-width: 210px;
+        margin-left: 25px;
+    }
+}
+
+.menu__title,
+.menu__price {
+    font-family: $kurale-font;
+    text-transform: uppercase;
+    font-style: 15px;
+    color: $tabs;
+    font-weight: 400;
+}
+
+.menu__title {
+    //установим inline-block что бы он не заполнял всю длину
+    display: inline-block;
+    border-bottom: 1px solid $tabs;
+}
+
+.menu__desc {
+    font-size: 12px;
+    line-height: 14px; 
+    color: $gray-opacity;
+    margin-top: 24px;
+}
+
+.menu__slider {
+    .swiper-slide {
+        height: 175px;
+        margin-bottom: 55px;
+        //Что бы блоки были поровнее
+        display: flex;
+        justify-content: center;
+    }
+}
+
+//Сново делаем точечки
+.menu__pagination {
+    @include flex (center, center);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $gray-opacity;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: 0.3s;
+        &:hover,
+        &-active {
+            background: $yellow;
+        }
+    }
+}

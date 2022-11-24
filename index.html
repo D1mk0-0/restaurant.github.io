@@ -184,7 +184,324 @@
                 <h6>Спец-предложения</h6>
             </div>
             <!-- Подключаем наш swiper-слайдер четко по документации -->
+            <div class="swiper-container spec__slider">
+                <div class="swiper-wrapper">
+                    <!-- slide -->
+                    <div class="swiper-slide spec__slide">
+                        <div class="container spec__slide-container">
+                            <div class="spec__img">
+                                <img src="img/slide1.jpg" alt="">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="spec__text">
+                                <h2>Golden Egg</h2>
+                                <p class="intro">
+                                    Невероятно красивый десерт Пирожное "Golden Egg". 3D пирожное в форме яйца в
+                                    гнёздышке.
+                                </p>
+                                <p>
+                                    Узнать, каково золото на вкус, приглашаем в наш ресторан. Темный бельгийский
+                                    шоколад, Амаретто, мусс мята-лемонграсс, центр морковь-маракуйя — удержаться почти
+                                    невозможно.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end slide-->
+                    <!-- slide -->
+                    <div class="swiper-slide spec__slide">
+                        <div class="container spec__slide-container">
+                            <div class="spec__img">
+                                <img src="img/slide2.jpg" alt="">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="spec__text">
+                                <h2>Утиные истории</h2>
+                                <p class="intro">
+                                    Утиные ножки здесь маринуют с травами, запекают, а потом тушат, пока мясо не
+                                    приобретет нежную текстуру.
+                                </p>
+                                <p>
+                                    К утке подают красную капусту, томлёную в красном вине, а также толчёный картофель
+                                    со шкварками. Фермерскую утиную грудку обжаривают и подают с соусом демиглас и
+                                    вишнёвым кули, а также с нежным картофельным гратеном, запечённым со сливками,
+                                    тимьяном и сыром пармезан.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end slide-->
+                    <!-- slide -->
+                    <div class="swiper-slide spec__slide">
+                        <div class="container spec__slide-container">
+                            <div class="spec__img">
+                                <img src="img/slide3.jpg" alt="">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="spec__text">
+                                <h2>Огненные крылышки</h2>
+                                <p class="intro">
+                                    Что мы о них знаем? Они хрустящие. Они бодряще острые. Они сочные и ароматные. Они
+                                    просто легендарные!
+                                </p>
+                                <p>
+                                    Ощущение волшебного и в меру острого вкуса ароматного мяса подарит настоящее
+                                    наслаждение и приятно взбодрит. А как хрустит панировка — попробуйте устоять!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end slide-->
+                </div>
+                <!-- Делаем пагинацию -->
+                <div class="swiper-pagination spec__pagination"></div>
+            </div>
         </section> <!--  Закрывает spec -->
+        <section class="menu" id="menu">
+            <h2>Наше меню</h2>
+            <p class="intro menu__intro">
+                Предлагаем насладиться кухней от профессиональных поваров ресторана GOLDEN EGG!
+            </p>
+            <!-- Делаем вкладки, которые будут скролится -->
+            <div class="tabs__container">
+                <ul class="tabs">
+                    <!-- Для связки элементов меню с js установим атрибуты data-tab-->
+                    <li class="tabs__item" data-tab="#snacks">Закуски</li>
+                    <li class="tabs__item active" data-tab="#meats">Мясные блюда</li>
+                    <li class="tabs__item" data-tab="#salads">Салаты</li>
+                    <li class="tabs__item">Десерты</li>
+                    <li class="tabs__item">Вина</li>
+                    <li class="tabs__item">Напитки</li>
+                </ul>
+            </div>
+            <div class="menu__sliders">
+                <!-- Slider 1 -->
+                <div class="menu__slider-block" id="snacks">
+                    <div class="swiper-container menu__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuSnack1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Попперы халапеньо</h6>
+                                        <h6 class="menu__price">490&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination menu__pagination"></div>
+                    </div>
+                </div>
+                <!-- End slider 1 -->
+                <!-- Slider 2 -->
+                <div class="menu__slider-block show" id="meats">
+                    <div class="swiper-container menu__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination menu__pagination"></div>
+                    </div>
+                </div>
+                <!-- End slider 2 -->
+                <!-- Slider 3 -->
+                <div class="menu__slider-block" id="salads">
+                    <div class="swiper-container menu__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__item">
+                                    <img class="menu__item-img" src="img/menuMeats1.jpg" alt="">
+                                    <div class="menu__item-text">
+                                        <h6 class="menu__title">Стейк из говядины</h6>
+                                        <h6 class="menu__price">890&#8381;</h6>
+                                        <p class="menu__desc">Это перец халапеньо, который был выдолблен, начинен смесью
+                                            сыра, специй, и мясного фарша, запанирован и обжарен во фритюре.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination menu__pagination"></div>
+                    </div>
+                </div>
+                <!-- End slider 3 -->
+            </div>
+        </section>
     </div> <!-- end wrapper -->
     <!-- В конце подключаем js из Swiper-слайдера. Без использования jQuery -->
     <script src="js/swiper.min.js"></script>

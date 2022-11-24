@@ -1,0 +1,84 @@
+//Делаем весь контейнер position relative
+.spec__container {
+    position: relative;
+
+    h6 {
+        color: $white;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: center;
+        //Что бы было видно поверх слайдера 
+        position: absolute;
+        z-index: 2;
+        //Поскольку наш absolute убил ширину установим ее заново
+        width: 100%;
+        top: 45px;
+    }
+}
+
+//Зададим всем слайдам один и тот же фон
+.spec__slide {
+    //Используем картинку + градиент
+    background: url(../img/bg-slide.jpg) center/cover no-repeat,
+        linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+    //Нужно для смешения картинки с градиентом
+    background-blend-mode: multiply;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.spec__slide-container {
+    //Опять используем МИКСИН 
+    @include flex (space-between, center);
+}
+
+.spec__text {
+    color: $white;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+    padding-left: 30px;
+}
+
+.spec__img {
+    width: 50%;
+    max-width: 500px;
+    //Для выравнивания кружочка position relative
+    position: relative;
+    text-align: right;
+
+    .circle {
+        left: 0;
+        transform: translate(-40%, -50%);
+    }
+
+    img {
+        @include img;
+    }
+}
+
+//Пропишем сами кнопочки
+.spec__pagination {
+    //Подключаем МИКСИН с флексом
+    @include flex (center, center);
+    position: absolute;
+    width: 100%;
+    bottom: 45px;
+    z-index: 2;
+
+    //Проверяем какой класс у кнопок через inspect браузера 
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $white-opacity;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: 0.3s;
+        &:hover,
+        &-active {
+            background: $white;
+        }
+    }
+}
