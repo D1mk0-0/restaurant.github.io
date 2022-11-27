@@ -51,6 +51,9 @@
     img {
         @include img;
     }
+    @media (max-width: 1059px){
+        margin: 40px;
+    }
 }
 
 .event__title {

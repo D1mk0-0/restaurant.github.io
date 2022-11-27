@@ -22,6 +22,9 @@
     //Сново используем наш МИКСИН
     @include flex (space-between, center);
     margin-top: 50px;
+    @include laptop {
+        justify-content: center;
+    }
 }
 
 .team__text {
@@ -29,6 +32,10 @@
     min-width: 600px;
     text-align: center;
     color: $white;
+    @include mobile {
+        width: 100%;
+        min-width: 100%;
+    }
 }
 
 .team__img {

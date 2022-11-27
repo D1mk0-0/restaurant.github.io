@@ -11,6 +11,9 @@
         width: 520px;
         margin: $mc;
         margin-bottom: 40px;
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
@@ -62,6 +65,14 @@
         transition: 0.3s;
         &:hover {
             background: darken($yellow, 10%);
+        }
+        @media (max-width: 1240px){
+            max-width: 350px;
+        }
+        @include tablet {
+            width: 100%;
+            max-width: none;
+            margin-top: 20px;
         }
     }
 }

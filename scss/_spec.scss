@@ -14,6 +14,9 @@
         //Поскольку наш absolute убил ширину установим ее заново
         width: 100%;
         top: 45px;
+        @include notebook {
+            display: none;
+        }
     }
 }
 
@@ -31,6 +34,9 @@
 .spec__slide-container {
     //Опять используем МИКСИН 
     @include flex (space-between, center);
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .spec__text {
@@ -39,6 +45,14 @@
     width: 50%;
     max-width: 600px;
     padding-left: 30px;
+    @include tablet {
+        width: 100%;
+        height: 400px;
+        padding-left: 0;
+    }
+    @include mobile {
+        height: 500px;
+    }
 }
 
 .spec__img {

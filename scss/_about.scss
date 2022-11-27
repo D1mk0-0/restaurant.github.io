@@ -7,12 +7,19 @@
 .about__container {
     //Сново используем наш миксин
     @include flex (space-between, center);
+    @include laptop {
+        justify-content: center;
+    }
 }
 
 .about__text {
     width: 50%;
     min-width: 600px;
     text-align: center;
+    @include mobile {
+        width: 100%;
+        min-width: 100%;
+    }
 }
 
 .about__img {

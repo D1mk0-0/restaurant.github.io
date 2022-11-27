@@ -34,6 +34,9 @@
         //Затем забираем градиент из фигмы
         background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%);
     }
+    @include notebook {
+        
+    }
 }
 
 .top-menu__list {
@@ -62,6 +65,10 @@
             color: $yellow;
             border-top: 5px solid $yellow;
         }
+
+        @media (max-width: 803px){
+            padding: 20px 15px;
+        }
     }
 }
 
@@ -74,12 +81,18 @@
         width: 80px;
         height: 100px
     }
+    @include tablet {
+        display: none;
+    }
 }
 
 .home__container-center {
     //Сново задействуем наш миксин
     @include flex(space-between, flex-start);
     margin-top: 175px;
+    @media (max-width: 680px){
+        justify-content: center;
+    }
 }
 
 .socials {
@@ -97,6 +110,9 @@
         &:hover {
             background: $yellow;
         }
+    }
+    @media (max-width: 680px){
+        display: none;
     }
 }
 
@@ -175,4 +191,7 @@
     //Что бы текст отображался вертикально
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    @media (max-width: 680px){
+        display: none;
+    }
 }
